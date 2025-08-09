@@ -1,0 +1,331 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.header {
+  background-color: #222;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.hero {
+  background: linear-gradient(to right, #f36, #f90);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.cta {
+  background: white;
+  color: #f36;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 20px;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+  margin: 1rem auto;
+  max-width: 100%;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-track img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+.carousel-btn.prev {
+  left: 0;
+}
+
+.carousel-btn.next {
+  right: 0;
+}
+
+.search input {
+  width: 90%;
+  max-width: 600px;
+  margin: 1rem auto;
+  display: block;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.filters {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.filters button {
+  margin: 0.2rem;
+  padding: 0.4rem 1rem;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.product-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.product-card .name {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.product-card .seller {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.product-card .whatsapp {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background: #25D366;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-img {
+  max-width: 300px;
+  max-height: 300px;
+  margin-bottom: 1rem;
+}
+
+.modal-details {
+  color: white;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background: #333;
+    padding: 1rem;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+/*////////////////////footer start///////////////////////*/
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.footer-contact,
+.footer-brand {
+  flex: 1 1 250px;
+  margin: 0.5rem;
+}
+
+.footer a {
+  color: #25D366;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/*////////////////////footer end///////////////////////*/
+
+/*////////////hoover effect on products start/////////////*/
+.product-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  border: 1px solid #f36; /* optional pinkish border */
+}
+
+.product-card .name:hover {
+  color: #f36;
+}
+
+.product-card .whatsapp:hover {
+  background: #128C7E;
+}
+
+/*////////////hoover effect on products end/////////////*/
+
+/* Make modal image fill most of the screen */
+.modal-img {
+  max-width: 90%;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+@media (max-width: 768px) {
+  .modal-img {
+    max-width: 75%;
+    max-height: 70vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* Make each product full width on small screens */
+  }
+  .product-card {
+    padding: 0.5rem;
+  }
+  .product-card .name {
+    font-size: 1rem;
+  }
+  .product-card .code,
+  .product-card .seller,
+  .product-card .location {
+    font-size: 0.85rem;
+  }
+  .product-card .whatsapp {
+    font-size: 0.85rem;
+    padding: 0.2rem 0.5rem;
+  }
+}
+/*always two columns on mobile view*/
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* Always two columns */
+  }
+  .product-card {
+    padding: 0.5rem;
+  }
+  .product-card .name {
+    font-size: 0.9rem;
+  }
+  .product-card .code,
+  .product-card .seller,
+  .product-card .location {
+    font-size: 0.8rem;
+  }
+}
+
+
+
+
