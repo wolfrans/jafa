@@ -121,8 +121,8 @@ function displayProducts(list) {
       <div class="code">code: ${product.code}</div>
       <div class="seller">By: ${product.seller}</div>
       <div class="location">📍 ${product.location}</div>
-      <a class="whatsapp" href="https://wa.me/${product.whatsapp}?text=Hi%20I%20want%20to%20buy%20${product.name}%20(ID:${product.id})" target="_blank">WhatsApp</a>
-    `;
+      <a class="whatsapp" href="https://wa.me/${product.whatsapp}?text=Hi%20I%20want%20to%20buy%20${product.name}%20(ID:${product.code})" target="_blank">WhatsApp</a>
+      `;
     // Stop WhatsApp click from opening modal
 card.querySelector('.whatsapp').addEventListener('click', (e) => {
   e.stopPropagation();
@@ -195,4 +195,5 @@ document.addEventListener('keydown', (e) => {
     modal.style.display = 'none';
   }
 });
+
 
