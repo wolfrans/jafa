@@ -61,8 +61,7 @@ const products = [
   { name: "Jersey", category: "sports", image: "images/abdala/abd-048.jpg", code: "abd-048", seller: "Abdala", location: "Kumasi", whatsapp: "233246297659" },
   { name: "Jersey", category: "sports", image: "images/abdala/abd-049.jpg", code: "abd-049", seller: "Abdala", location: "Kumasi", whatsapp: "233246297659" },
   { name: "Jersey", category: "sports", image: "images/abdala/abd-050.jpg", code: "abd-050", seller: "Abdala", location: "Kumasi", whatsapp: "233246297659" },
-  { name: "Jersey", category: "sports", image: "images/abdala/abd-051.jpg", code: "abd-051", seller: "Abdala", location: "Kumasi", whatsapp: "233246297659" },
-  { name: "Jersey", category: "sports", image: "images/abdala/abd-052.jpg", code: "abd-052", seller: "Abdala", location: "Kumasi", whatsapp: "233246297659" }
+  { name: "Jersey", category: "sports", image: "images/abdala/abd-051.jpg", code: "abd-051", seller: "Abdala", location: "Kumasi", whatsapp: "233246297659" }
 ];
 
 
@@ -192,4 +191,5 @@ const termsCloseBtn = document.querySelector("#termsModal .close");
 termsCloseBtn.onclick = function() {
   termsModal.style.display = "none";
 };
+
 // When user clicks the x, close the terms modal start
