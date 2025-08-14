@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic page info -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ShopGH - Buy & Sell in Ghana | Jerseys, Clothing & More</title>
+  <meta name="description" content="ShopGH — discover jerseys, clothing, sportswear and connect with sellers in Kumasi, Accra and across Ghana. Buy and sell easily." />
+  <meta name="keywords" content="ShopGH, buy jerseys Ghana, online marketplace Ghana, Kumasi shop, sell online Ghana" />
+  <meta name="author" content="ShopGH" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://shopgh.org/" />
+  <meta property="og:title" content="ShopGH - Buy & Sell in Ghana | Jerseys, Clothing & More" />
+  <meta property="og:description" content="ShopGH — discover jerseys, clothing and sportswear. Connect with trusted local sellers in Kumasi and beyond." />
+  <meta property="og:image" content="https://shopgh.org/images/preview.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@shopgh" />
+  <meta name="twitter:title" content="ShopGH - Buy & Sell in Ghana" />
+  <meta name="twitter:description" content="Discover jerseys, clothing and more on ShopGH. Connect with sellers in Kumasi and across Ghana." />
+  <meta name="twitter:image" content="https://shopgh.org/images/preview.jpg" />
+
+  <!-- Canonical & favicon -->
+  <link rel="canonical" href="https://shopgh.org/" />
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <!-- FIXED: removed duplicate favicon -->
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/terms.css" />
+
+  <!-- JSON-LD structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "ShopGH",
+    "url": "https://shopgh.org/",
+    "logo": "https://shopgh.org/images/logo.png",
+    "telephone": "+233247672242",
+    "sameAs": [
+      "https://facebook.com/shopgh",
+      "https://instagram.com/shopgh"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kumasi",
+      "addressCountry": "GH"
+    }
+  }
+  </script>
+</head>
+
+<body>
+<header class="header">
+<div class="logo" style="cursor:pointer;">
+  <img src="images/logo.png" alt="ShopGH logo" style="height:80px;">
+</div>
+
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#productGrid">Categories</a></li>
+      <li><a href="#footer">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">&#9776;</button> <!-- FIXED: added aria-label -->
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Discover Fashion</h1>
+  <p>Connect with sellers. Shop easily.</p>
+  <a href="#productGrid" class="cta">Browse Products</a>
+</section>
+
+<section id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/banner1.jpg" class="d-block w-100" alt="Shoe and shirt" style="height: 400px; object-fit: cover;"> <!-- FIXED: improved alt text -->
+    </div>
+    <div class="carousel-item">
+      <img src="images/banner2.jpg" class="d-block w-100" alt="Bag, belt, shoes, and accessories" style="height: 400px; object-fit: cover;">
+    </div>
+    <div class="carousel-item">
+      <img src="images/banner3.jpg" class="d-block w-100" alt="Coats on hangers" style="height: 400px; object-fit: cover;">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</section>
+
+<section class="search">
+  <input type="text" id="searchInput" placeholder="Search products by name, category, or location...">
+</section>
+
+<section class="filters">
+  <button onclick="filterItems('all')">All</button>
+  <button onclick="filterItems('dress')">Dresses</button>
+  <button onclick="filterItems('shoes')">Shoes</button>
+  <button onclick="filterItems('bags')">Bags</button>
+  <button onclick="filterItems('belts')">Belts</button>
+  <button onclick="filterItems('sports')">Sports</button>
+</section>
+
+<section class="product-grid" id="productGrid">
+  <div id="loader" class="loader">Loading products...</div>
+  <!-- Product cards will be injected here -->
+</section>
+
+<section class="add-product">
+  <h2>Want to Sell on ShopGh?</h2>
+  <p><a href="https://wa.me/233247672242?text=Hello%20ShopGh!%20I%20would%20like%20to%20register%20my%20product%20for%20sale." target="_blank">Click here to register your product</a></p> <!-- FIXED: corrected WhatsApp link -->
+</section>
+
+<footer id="footer" class="footer">
+  <div class="footer-contact">
+    <h3>Contact Us</h3>
+    <p><a href="https://wa.me/233247672242" target="_blank">📱 WhatsApp</a></p> <!-- FIXED: corrected WhatsApp link -->
+    <p><a href="https://t.me/ShopGh" target="_blank">💬 Telegram</a></p>
+    <p><a href="mailto:wolfransdesign@gmail.com">✉️ wolfransdesign@gmail.com</a></p> <!-- FIXED: removed extra .com -->
+  </div>
+  <div class="footer-brand">
+    <h3>ShopGh</h3>
+    <p>&copy; 2025 All rights reserved.</p>
+  </div>
+  <div class="footer-legal">
+    <p><strong>Disclaimer:</strong> This website is a marketplace connector. We are not involved in any transactions between buyers and sellers.</p>
+  </div>
+
+  <div class="terms-container">
+    <button id="termsBtn">Terms & Conditions</button>
+  </div>
+</footer>
+
+<!-- Product Modal -->
+<div class="modal product-modal" id="modal"> <!-- FIXED: added unique class -->
+  <span class="close" id="closeModal">&times;</span>
+  <img class="modal-img" id="modalImg" src="" alt="" />
+  <div class="modal-details" id="modalDetails"></div>
+</div>
+
+<!-- Terms Modal -->
+<div id="termsModal" class="modal terms-modal"> <!-- FIXED: added unique class -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Terms & Conditions</h2>
+    <p>
+      This platform serves as a connection point between buyers and sellers.
+      We do not participate in or guarantee any transactions between the parties.
+      Please verify all details before making any payment.
+    </p>
+    <p>
+      By using this site, you agree that the site owner is not responsible for any
+      loss, damage, or dispute arising from transactions initiated here.
+    </p>
+    <p><a href="terms.html" target="_blank">Read full Terms & Conditions || Privacy policy</a></p>
+  </div>
+</div>
+
+<!-- JS (moved script.js to bottom for performance) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script defer src="js/script.js"></script> <!-- FIXED: placed at bottom -->
+</body>
+</html>
